@@ -1,0 +1,230 @@
+<mxfile host="app.diagrams.net" agent="Codex" version="26.0.9">
+  <diagram id="pcf-figure-1" name="PCF workflow">
+    <mxGraphModel page="1" pageWidth="1900" pageHeight="960" grid="1" gridSize="10" math="1" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="training_title" value="A. Training stage" vertex="1" parent="1" style="text;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=40;fontStyle=1;align=left;verticalAlign=middle;;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="40" y="24" width="550" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="observed" value="Observed&#10;training entries" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F6F8FA;strokeColor=#89949F;strokeWidth=1.6;fontSize=26;fontStyle=1;align=center;verticalAlign=middle;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="40" y="210" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="split" value="3-fold&#10;split" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F6F8FA;strokeColor=#89949F;strokeWidth=1.6;fontSize=30;fontStyle=1;align=center;verticalAlign=middle;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="330" y="210" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nimf_oof" value="NIMF" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#EAF0F6;strokeColor=#63758A;strokeWidth=1.7;fontSize=30;fontStyle=1;align=center;verticalAlign=top;spacingTop=13;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="560" y="150" width="230" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="nimf_oof_subtitle" value="OOF predictions" vertex="1" parent="1" style="text;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=26;fontStyle=0;align=center;verticalAlign=middle;;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="568" y="196" width="214" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b3_oof" value="B3" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#EAF0F6;strokeColor=#63758A;strokeWidth=1.7;fontSize=30;fontStyle=1;align=center;verticalAlign=top;spacingTop=13;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="560" y="290" width="230" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="b3_oof_subtitle" value="OOF predictions" vertex="1" parent="1" style="text;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=26;fontStyle=0;align=center;verticalAlign=middle;;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="568" y="336" width="214" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aligned" value="Aligned OOF&#10;prediction pairs" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F6F8FA;strokeColor=#89949F;strokeWidth=1.6;fontSize=30;fontStyle=1;align=center;verticalAlign=middle;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="860" y="210" width="290" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fit" value="Gate fitting" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F6F8FA;strokeColor=#89949F;strokeWidth=1.6;fontSize=30;fontStyle=1;align=center;verticalAlign=top;spacingTop=13;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="1220" y="210" width="450" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fit_subtitle" value="Learn a and β" vertex="1" parent="1" style="text=1;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=28;fontStyle=0;align=center;verticalAlign=middle;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="1228" y="254" width="434" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="target_label" value="Training targets" vertex="1" parent="1" style="text;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=28;fontStyle=0;align=center;verticalAlign=middle;;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="895" y="66" width="325" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="frozen_label" value="Frozen parameters&#10;(a, β)" vertex="1" parent="1" style="text;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=28;fontStyle=0;align=center;verticalAlign=middle;;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="1300" y="350" width="360" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="entries_split" value="" edge="1" parent="1" source="observed" target="split" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" data-relation="data" data-description="Observed entries for shared folds">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="265" as="sourcePoint" />
+            <mxPoint x="330" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="split_nimf" value="" edge="1" parent="1" source="split" target="nimf_oof" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.3181818181818182;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" data-relation="data" data-description="Same fold-training and omitted coordinates">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="245" as="sourcePoint" />
+            <mxPoint x="560" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="245" />
+              <mxPoint x="540" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="split_b3" value="" edge="1" parent="1" source="split" target="b3_oof" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.6818181818181818;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" data-relation="data" data-description="Same fold-training and omitted coordinates">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="285" as="sourcePoint" />
+            <mxPoint x="560" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="285" />
+              <mxPoint x="540" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nimf_align" value="" edge="1" parent="1" source="nimf_oof" target="aligned" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.3181818181818182;entryPerimeter=0;" data-relation="data" data-description="Omitted-fold NIMF predictions">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="200" as="sourcePoint" />
+            <mxPoint x="860" y="245" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="825" y="200" />
+              <mxPoint x="825" y="245" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b3_align" value="" edge="1" parent="1" source="b3_oof" target="aligned" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.6818181818181818;entryPerimeter=0;" data-relation="data" data-description="Omitted-fold B3 predictions">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="340" as="sourcePoint" />
+            <mxPoint x="860" y="285" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="825" y="340" />
+              <mxPoint x="825" y="285" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aligned_fit" value="" edge="1" parent="1" source="aligned" target="fit" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" data-relation="data" data-description="Aligned training-role OOF prediction pairs">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1150" y="265" as="sourcePoint" />
+            <mxPoint x="1220" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="targets_fit" value="" edge="1" parent="1" source="observed" target="fit" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=0.4583333333333333;exitY=0.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" data-relation="data" data-description="Corresponding observed training targets">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="210" as="sourcePoint" />
+            <mxPoint x="1445" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="150" y="118" />
+              <mxPoint x="1445" y="118" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="inference_title" value="B. Inference stage" vertex="1" parent="1" style="text;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=40;fontStyle=1;align=left;verticalAlign=middle;;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="40" y="414" width="640" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="query" value="User-service&#10;pair (u, s)" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F6F8FA;strokeColor=#89949F;strokeWidth=1.6;fontSize=30;fontStyle=1;align=center;verticalAlign=middle;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="40" y="640" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="b3_full" value="B3" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#EAF0F6;strokeColor=#63758A;strokeWidth=1.7;fontSize=30;fontStyle=1;align=center;verticalAlign=top;spacingTop=13;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="330" y="495" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="b3_full_subtitle" value="Full-training&#10;prediction" vertex="1" parent="1" style="text=1;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=28;fontStyle=0;align=center;verticalAlign=middle;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="338" y="539" width="264" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="nimf_full" value="NIMF" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#EAF0F6;strokeColor=#63758A;strokeWidth=1.7;fontSize=30;fontStyle=1;align=center;verticalAlign=top;spacingTop=13;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="330" y="710" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nimf_full_subtitle" value="Full-training&#10;prediction" vertex="1" parent="1" style="text=1;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=28;fontStyle=0;align=center;verticalAlign=middle;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="338" y="754" width="264" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="feature" value="B3 feature" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#89949F;strokeWidth=1.6;fontSize=28;fontStyle=1;align=center;verticalAlign=top;spacingTop=9;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="670" y="495" width="340" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="feature_equation" value="\(x=\log(1+\max(b,0))\)" vertex="1" parent="1" style="text;shape=text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=28;fontStyle=0;align=center;verticalAlign=middle;;fontFamily=DejaVu Sans;fontColor=#263238;" data-math="1">
+          <mxGeometry x="675" y="533" width="330" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gate" value="Prediction-conditioned&#10;gate" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F1D7D4;strokeColor=#B44948;strokeWidth=3;fontSize=34;fontStyle=1;align=center;verticalAlign=top;spacingTop=14;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="1040" y="455" width="450" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="gate_equation" value="\(w=\mathrm{sigmoid}(a-kx)\)" vertex="1" parent="1" style="text=1;shape=text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=34;fontStyle=0;align=center;verticalAlign=middle;fontFamily=DejaVu Sans;fontColor=#263238;" data-math="1">
+          <mxGeometry x="1050" y="525" width="430" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="slope_equation" value="\(k=\mathrm{softplus}(\beta)\)" vertex="1" parent="1" style="text=1;shape=text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=32;fontStyle=0;align=center;verticalAlign=middle;fontFamily=DejaVu Sans;fontColor=#263238;" data-math="1">
+          <mxGeometry x="1050" y="591" width="430" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fusion" value="Weighted fusion" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#FFFFFF;strokeColor=#89949F;strokeWidth=1.6;fontSize=30;fontStyle=1;align=center;verticalAlign=top;spacingTop=13;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="1510" y="630" width="340" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="fusion_equation" value="\(\hat{r}=b+w(n-b)\)" vertex="1" parent="1" style="text;shape=text;html=1;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=32;fontStyle=0;align=center;verticalAlign=middle;;fontFamily=DejaVu Sans;fontColor=#263238;" data-math="1">
+          <mxGeometry x="1516" y="678" width="328" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="output" value="Final QoS prediction" vertex="1" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F6F8FA;strokeColor=#89949F;strokeWidth=1.6;fontSize=28;fontStyle=1;align=center;verticalAlign=middle;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="1510" y="840" width="340" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_label" value="b" vertex="1" parent="1" style="text;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=32;fontStyle=2;align=center;verticalAlign=middle;;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="980" y="640" width="65" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="n_label" value="n" vertex="1" parent="1" style="text;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=32;fontStyle=2;align=center;verticalAlign=middle;;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="980" y="715" width="65" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="w_label" value="w" vertex="1" parent="1" style="text;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontSize=32;fontStyle=2;align=center;verticalAlign=middle;;fontFamily=DejaVu Sans;fontColor=#263238;">
+          <mxGeometry x="1510" y="515" width="65" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="query_b3" value="" edge="1" parent="1" source="query" target="b3_full" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.3181818181818182;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" data-relation="data" data-description="Query coordinate to full-training B3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="675" as="sourcePoint" />
+            <mxPoint x="330" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="305" y="675" />
+              <mxPoint x="305" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="query_nimf" value="" edge="1" parent="1" source="query" target="nimf_full" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.6818181818181818;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" data-relation="data" data-description="Query coordinate to full-training NIMF">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="715" as="sourcePoint" />
+            <mxPoint x="330" y="765" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="305" y="715" />
+              <mxPoint x="305" y="765" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b3_feature" value="" edge="1" parent="1" source="b3_full" target="feature" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" data-relation="data" data-description="B3 prediction b for feature only">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="550" as="sourcePoint" />
+            <mxPoint x="670" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="feature_gate" value="" edge="1" parent="1" source="feature" target="gate" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.4523809523809524;entryPerimeter=0;" data-relation="data" data-description="Transformed feature x">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1010" y="550" as="sourcePoint" />
+            <mxPoint x="1040" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="frozen_parameters" value="" edge="1" parent="1" source="fit" target="gate" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#6B7280;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;dashed=1;dashPattern=7 5;exitX=0.1;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" data-relation="parameters" data-description="Freeze a and beta after OOF fitting; inference performs no fitting">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1265" y="320" as="sourcePoint" />
+            <mxPoint x="1265" y="455" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gate_fusion" value="" edge="1" parent="1" source="gate" target="fusion" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.5238095238095238;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" data-relation="data" data-description="NIMF weight w">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1490" y="565" as="sourcePoint" />
+            <mxPoint x="1680" y="630" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1680" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="raw_b_fusion" value="" edge="1" parent="1" source="b3_full" target="fusion" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.0;entryY=0.35294117647058826;entryPerimeter=0;" data-relation="data" data-description="Original B3 prediction b; no clipping">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470" y="605" as="sourcePoint" />
+            <mxPoint x="1510" y="690" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="470" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n_fusion" value="" edge="1" parent="1" source="nimf_full" target="fusion" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.7941176470588235;entryPerimeter=0;" data-relation="data" data-description="Original NIMF prediction n">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="765" as="sourcePoint" />
+            <mxPoint x="1510" y="765" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fusion_output" value="" edge="1" parent="1" source="fusion" target="output" style="edgeStyle=none;rounded=0;html=0;endArrow=block;endSize=9;endFill=1;strokeColor=#263238;strokeWidth=2.5;fontFamily=DejaVu Sans;fontSize=28;exitX=0.5;exitY=1.0;exitPerimeter=0;entryX=0.5;entryY=0.0;entryPerimeter=0;" data-relation="data" data-description="Final fused QoS prediction">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1680" y="800" as="sourcePoint" />
+            <mxPoint x="1680" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="color_key" value="Blue: experts     Red: PCF gate" vertex="1" parent="1" style="text;shape=text;html=0;whiteSpace=wrap;fillColor=none;strokeColor=none;fontFamily=DejaVu Sans;fontColor=#63758A;fontSize=26;fontStyle=0;align=left;verticalAlign=middle;">
+          <mxGeometry x="40" y="875" width="700" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

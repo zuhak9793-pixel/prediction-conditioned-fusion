@@ -1,0 +1,5 @@
+# Python 3.10; core pins verified in an isolated Windows environment (2026-11-20).
+numpy==1.26.4
+scipy==1.13.0
+matplotlib==3.8.4
+Cython==3.0.12

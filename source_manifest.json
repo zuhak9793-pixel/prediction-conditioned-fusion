@@ -1,0 +1,134 @@
+[
+  {
+    "source": "results/qos_nimf_port_20261108/working/c_NIMF.cpp",
+    "sha256": "5617d1105baa6cae2a5f195c88c617f3922442b26149868e11630a5c28f1749c",
+    "destination": "native/c_NIMF.cpp",
+    "change": "byte-identical"
+  },
+  {
+    "source": "results/qos_nimf_port_20261108/working/c_NIMF.h",
+    "sha256": "6c7628bb42e787b1ca5e1b6f11f94f32b2e1f0255ee055f254508077366382bf",
+    "destination": "native/c_NIMF.h",
+    "change": "byte-identical"
+  },
+  {
+    "source": "results/qos_nimf_port_20261108/working/c_UIPCC.cpp",
+    "sha256": "d274aad0fb59300b1178ad3a23637ab7168706c91d79446bedd7fbed5e3fbd59",
+    "destination": "native/c_UIPCC.cpp",
+    "change": "byte-identical"
+  },
+  {
+    "source": "results/qos_nimf_port_20261108/working/c_UIPCC.h",
+    "sha256": "5f407956249affcd68be88fc5091af98f6a36ccd371a95bf53485466ea06e231",
+    "destination": "native/c_UIPCC.h",
+    "change": "byte-identical"
+  },
+  {
+    "source": "results/qos_nimf_port_20261108/working/bridge.h",
+    "sha256": "e1d7c7d1d771a44e8b165fba02bd589b96d3dd6e64d335f711f1ab8d1d3f00ac",
+    "destination": "native/bridge.h",
+    "change": "byte-identical"
+  },
+  {
+    "source": "results/qos_nimf_port_20261108/working/NIMF.pyx",
+    "sha256": "9dcb0092127bd225efdd951294132d8c295f7af041e93817937593019ab6d2d2",
+    "destination": "native/NIMF.pyx",
+    "change": "byte-identical"
+  },
+  {
+    "source": "results/qos_fusion_cross_seed_20261115/NIMF_LICENSE",
+    "sha256": "da0ea64355e5976cef84796217cd5fe28c8dd5e8606386e870fbbc6da8ab814f",
+    "destination": "LICENSES/WS-DREAM-MIT.txt",
+    "change": "byte-identical"
+  },
+  {
+    "source": "results/qos_recent_base_gate_20261112/upstream_original/RA-QoS/LICENSE",
+    "sha256": "9156ed6011aea75a6293ed22bb93641377ee4991955ff491e147c1f86805dc7d",
+    "destination": "LICENSES/RA-QoS-supplement-MIT.txt",
+    "change": "byte-identical"
+  },
+  {
+    "source": "results/qos_fusion_cross_seed_20261115/b3_model.py",
+    "sha256": "8c12ea1fa887b98480376abc0376234bf5c81e0b552b0e890c857faf005a8727"
+  },
+  {
+    "source": "results/qos_fusion_cross_seed_20261115/b3_oof.py",
+    "sha256": "a768df1690d4c9263aaff3b64aa1dd8eb8d111423de159d3da07afa5c7f04b1b"
+  },
+  {
+    "source": "results/qos_fusion_cross_seed_20261115/model.py",
+    "sha256": "6915f206e2b9de0bccb1133822cc6fd46535be02940803c6624f69f21229dfd0"
+  },
+  {
+    "source": "results/qos_fusion_cross_seed_20261115/nimf_oof.py",
+    "sha256": "6d0384ff39bbad37cb7329457863442e3dd599a0a7d788ca5261157f9ea712f3"
+  },
+  {
+    "source": "results/qos_dhem_fusion_20261114/compare.py",
+    "sha256": "31378ba42bc012472f4de06365e6d00353057095c8e90c56154bd8de9a284a10"
+  },
+  {
+    "source": "reproductions/raqos_paper_based_20261115/model.py",
+    "sha256": "cf8ae21ee3406dd6d6d36537d60692272811769bcfb137c4b9b16923ed1400ef",
+    "destination": "pcf/raqos.py",
+    "change": "byte-identical"
+  },
+  {
+    "source": "results/qos_fusion_cross_seed_20261115/protocol.json",
+    "sha256": "791601b6a7108fcea87593c2ac2196325d6c5028542de4151106a4a8225a8812"
+  },
+  {
+    "source": "reproductions/raqos_paper_based_20261115/frozen_config.json",
+    "sha256": "f726baf4559bd6d3698f1f54d9f531a156ad01380e6c42b89ce1377de0ca3637"
+  },
+  {
+    "source": "paper/latex_v3_1_20261119/figure2/plot_fig02.py",
+    "sha256": "83225a908628405b0628b7ca56e5828ae14c8d13cc010030c4f630d9303be8df"
+  },
+  {
+    "source": "paper/figures/fig02_prediction_range_analysis/FIG02_DATA.csv",
+    "sha256": "415eba5f8dfa0b71c2d9d59a4a5fd034d87012787a2e98ecaa22949bcb5fb34a",
+    "destination": "figures/fig02/FIG02_DATA.csv",
+    "change": "byte-identical"
+  },
+  {
+    "source": "paper/figures/fig03_performance_tradeoff/polished_20261118/plot_fig03.py",
+    "sha256": "d32ea0d51a8cb719f0620a92bcefc21e83512cb73720a4d00b663f966928bb21"
+  },
+  {
+    "source": "paper/figures/fig03_performance_tradeoff/polished_20261118/FIG03_DATA.csv",
+    "sha256": "95aa098e01acc78ef6ac2cd4807784c6852c64d6c32a2d9d53d5f3e1c4f0612f",
+    "destination": "figures/fig03/FIG03_DATA.csv",
+    "change": "byte-identical"
+  },
+  {
+    "source": "paper/figures/fig01_pcf_framework/refined_20261117/fig01_pcf_framework.drawio",
+    "sha256": "94ed48da62c56907bf42ade8dba35c2581f6573d855181b32cc05cfc603953f6",
+    "destination": "figures/fig01/fig01_pcf_framework.drawio",
+    "change": "byte-identical"
+  },
+  {
+    "source": "paper/figures/fig01_pcf_framework/refined_20261117/export_figure.py",
+    "sha256": "1a8f8b8f7c691c55db17375cc0d364ae4dafe596092407e6dc342b05c3cdb6be",
+    "destination": "figures/fig01/plot.py",
+    "change": "byte-identical"
+  },
+  {
+    "source": "results/qos_frozen_evaluation_final_20261117/aggregate_metrics.csv",
+    "sha256": "07dd62cb9cb438240cb91f01b19053d2157b3d04c58f1d9e73f37eabeda20b0b",
+    "destination": "results/final_aggregate.csv",
+    "change": "byte-identical"
+  },
+  {
+    "source": "results/qos_frozen_evaluation_final_20261117/per_seed_metrics.csv",
+    "sha256": "1b8861f577fa1eaa8ea5a49aa6887d06ec1a2e71f05fd45fe590021261a39aa8",
+    "destination": "results/final_per_seed.csv",
+    "change": "only public scalar metric columns retained"
+  },
+  {
+    "source": "reproductions/raqos_paper_based_20261115/run.py",
+    "sha256": "f07ceec142121b24fe989a9ff19892b72867e17c0f5b03f2106ac7611ab85704",
+    "destination": "pcf/raqos_training.py",
+    "change": "configure/tensor_data/predict/fit AST retained; portable training-only orchestration"
+  }
+]

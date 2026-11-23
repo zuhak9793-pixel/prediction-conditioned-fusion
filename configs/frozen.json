@@ -1,0 +1,61 @@
+{
+  "nimf": {
+    "dimension": 10,
+    "alpha": 0.4,
+    "TopK": 10,
+    "lambda": 30.0,
+    "etaInit": 0.01,
+    "iterations": 95
+  },
+  "B3": {
+    "method": "B3",
+    "lambda": 10.0,
+    "lambda1": 10.0,
+    "tau": 1.0,
+    "bias_lambda": 0.3
+  },
+  "B3_sweeps": 49,
+  "gate": {
+    "formula": "x=log1p(max(B3,0)); k=softplus(b); w=sigmoid(a-k*x); p=B3+w*(NIMF-B3)",
+    "initial": [
+      0.0,
+      -2.0
+    ],
+    "penalty": "a^2+softplus(b)^2",
+    "bounds": null
+  },
+  "smooth_delta_s": 0.01,
+  "regularization": 0.0001,
+  "optimizer": {
+    "method": "L-BFGS-B",
+    "maxiter": 500,
+    "maxls": 40,
+    "ftol": 1e-12,
+    "gtol": 1e-07
+  },
+  "accept_max_abs_gradient": 2e-06,
+  "shape": [
+    339,
+    5825
+  ],
+  "seeds": [
+    20261107,
+    20261108,
+    20261109
+  ],
+  "densities_percent": [
+    1,
+    5
+  ],
+  "folds": 3,
+  "rank_b3": 8,
+  "numerical_threads": 1,
+  "fold_rule": "folds[RandomState(seed).permutation(N)] = arange(N) % 3",
+  "constant_initial": [
+    0.0
+  ],
+  "B3_nonlinear_initial": [
+    0.0,
+    0.0
+  ]
+}
